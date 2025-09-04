@@ -1,7 +1,11 @@
 import express from "express";
 import { movieCreate, movieDelete, movieGet, movieUpdate } from "../controller/movie.controller.js";
+import connectDB from "../lib/db.js";
 
-let router=express.Router();
+//connect 
+connectDB();
+
+let  router = express.Router();
 
 // R- for Read
 

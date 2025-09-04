@@ -11,3 +11,7 @@
 5. `git commit -m "your msg"`
 6. `git push -u origin main`
 7. `git push`
+
+### connect database
+
+1. `no sql - (mongodb)`
