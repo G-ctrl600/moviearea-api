@@ -1,16 +1,20 @@
 
 import express from 'express';
-import movieRouter from './Routes/movie.route.js';
+import employeeRouter from './Routes/employee.route.js';
 
 let app=express();
-let PORT=4000;
+let PORT=3000;
 
-app.get('/',(req,res)=>{
-    res.json({msg : "hello students!"})
+
+//use middleware to parse the json data
+app.use(express.json())
+
+app.get('/test',(req,res)=>{
+    res.send({msg : "hello students!"})
 })
 
-//CURD functionality of movies
-app.use('/movies',movieRouter)
+//CURD functionality of employees
+app.use('/employees',employeeRouter)
 
 app.listen(PORT,()=>{
     console.log(`server is running at port  http://localhost:${PORT}`);

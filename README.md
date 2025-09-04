@@ -1,6 +1,6 @@
-# moviearea-api
+# employeearea-api
 
-    provide a movie api for reactjs app
+    provide a employee api for reactjs app
 
 #### important comments
 
