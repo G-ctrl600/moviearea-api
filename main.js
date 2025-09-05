@@ -8,6 +8,7 @@ let PORT=3000;
 
 //use middleware to parse the json data
 app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 
 app.get('/test',(req,res)=>{
     res.send({msg : "hello students!"})

@@ -1,5 +1,5 @@
 import express from "express";
-import { employeeCreate, employeeDelete, employeeGet, employeeUpdate } from "../controller/employee.controller.js.js";
+import { employeeCreate, employeeDelete, employeeDetail, employeeGet, employeeUpdate } from "../controller/employee.controller.js";
 import connectDB from "../lib/db.js";
 
 //connect 
@@ -10,6 +10,9 @@ let  router = express.Router();
 // R- for Read
 
 router.get('/',employeeGet)
+
+// s - for show employee details
+router.get('/:id',employeeDetail)
 
 //c- for create
 router.post('/',employeeCreate)
